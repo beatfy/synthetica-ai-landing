@@ -180,6 +180,11 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     gap: 8px;
 }
 
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
 .logo-icon {
     color: var(--primary);
     font-size: 1.75rem;
