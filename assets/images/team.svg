@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="teamBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0066FF"/>
+      <stop offset="100%" style="stop-color:#4D94FF"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D4AA"/>
+      <stop offset="100%" style="stop-color:#00B894"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7B61FF"/>
+      <stop offset="100%" style="stop-color:#9D8FFF"/>
+    </linearGradient>
+    <linearGradient id="darkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#teamBg)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="80" fill="#0066FF" opacity="0.05"/>
+  <circle cx="700" cy="500" r="100" fill="#00D4AA" opacity="0.05"/>
+  <circle cx="650" cy="150" r="60" fill="#7B61FF" opacity="0.05"/>
+  
+  <!-- Team Members -->
+  <!-- Member 1 - CEO -->
+  <g transform="translate(100, 150)">
+    <circle cx="70" cy="70" r="70" fill="url(#blueGrad)"/>
+    <circle cx="70" cy="50" r="25" fill="#f8fafc"/>
+    <ellipse cx="70" cy="100" rx="35" ry="25" fill="#f8fafc"/>
+    <text x="70" y="170" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#0f172a" font-weight="600">Alejandro R.</text>
+    <text x="70" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#0066FF">CEO & Founder</text>
+  </g>
+  
+  <!-- Member 2 - Lead Data Scientist -->
+  <g transform="translate(270, 150)">
+    <circle cx="70" cy="70" r="70" fill="url(#greenGrad)"/>
+    <circle cx="70" cy="50" r="25" fill="#f8fafc"/>
+    <ellipse cx="70" cy="100" rx="35" ry="25" fill="#f8fafc"/>
+    <text x="70" y="170" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#0f172a" font-weight="600">Carla M.</text>
+    <text x="70" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#00D4AA">Lead Data Scientist</text>
+  </g>
+  
+  <!-- Member 3 - ML Engineer -->
+  <g transform="translate(440, 150)">
+    <circle cx="70" cy="70" r="70" fill="url(#purpleGrad)"/>
+    <circle cx="70" cy="50" r="25" fill="#f8fafc"/>
+    <ellipse cx="70" cy="100" rx="35" ry="25" fill="#f8fafc"/>
+    <text x="70" y="170" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#0f172a" font-weight="600">Daniel V.</text>
+    <text x="70" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#7B61FF">ML Engineer Lead</text>
+  </g>
+  
+  <!-- Member 4 - Head of Consulting -->
+  <g transform="translate(610, 150)">
+    <circle cx="70" cy="70" r="70" fill="url(#darkGrad)"/>
+    <circle cx="70" cy="50" r="25" fill="#f8fafc"/>
+    <ellipse cx="70" cy="100" rx="35" ry="25" fill="#f8fafc"/>
+    <text x="70" y="170" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#0f172a" font-weight="600">Sara L.</text>
+    <text x="70" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#64748b">Head of Consulting</text>
+  </g>
+  
+  <!-- Connection lines -->
+  <g stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4,4" opacity="0.6">
+    <line x1="170" y1="220" x2="270" y2="220"/>
+    <line x1="340" y1="220" x2="440" y2="220"/>
+    <line x1="510" y1="220" x2="610" y2="220"/>
+  </g>
+  
+  <!-- Skills/Expertise badges -->
+  <g transform="translate(50, 300)">
+    <rect x="0" y="0" width="700" height="200" rx="16" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+    
+    <!-- Expertise categories -->
+    <g transform="translate(30, 30)">
+      <circle cx="15" cy="15" r="15" fill="url(#blueGrad)"/>
+      <text x="40" y="20" font-family="Inter, sans-serif" font-size="14" fill="#0f172a" font-weight="600">Machine Learning</text>
+      <text x="40" y="38" font-family="Inter, sans-serif" font-size="11" fill="#64748b">TensorFlow, PyTorch, Scikit-learn</text>
+    </g>
+    
+    <g transform="translate(370, 30)">
+      <circle cx="15" cy="15" r="15" fill="url(#greenGrad)"/>
+      <text x="40" y="20" font-family="Inter, sans-serif" font-size="14" fill="#0f172a" font-weight="600">Cloud & MLOps</text>
+      <text x="40" y="38" font-family="Inter, sans-serif" font-size="11" fill="#64748b">AWS, GCP, Azure, Docker, Kubernetes</text>
+    </g>
+    
+    <g transform="translate(30, 90)">
+      <circle cx="15" cy="15" r="15" fill="url(#purpleGrad)"/>
+      <text x="40" y="20" font-family="Inter, sans-serif" font-size="14" fill="#0f172a" font-weight="600">NLP & LLMs</text>
+      <text x="40" y="38" font-family="Inter, sans-serif" font-size="11" fill="#64748b">GPT, Claude, Llama, RAG, Fine-tuning</text>
+    </g>
+    
+    <g transform="translate(370, 90)">
+      <circle cx="15" cy="15" r="15" fill="url(#darkGrad)"/>
+      <text x="40" y="20" font-family="Inter, sans-serif" font-size="14" fill="#0f172a" font-weight="600">Computer Vision</text>
+      <text x="40" y="38" font-family="Inter, sans-serif" font-size="11" fill="#64748b">YOLO, OpenCV, Image Segmentation</text>
+    </g>
+    
+    <!-- Stats row -->
+    <g transform="translate(0, 150)">
+      <rect x="30" y="0" width="140" height="40" rx="8" fill="#f1f5f9"/>
+      <text x="100" y="25" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#0f172a" font-weight="600">15+ años experiencia</text>
+      
+      <rect x="190" y="0" width="140" height="40" rx="8" fill="#f1f5f9"/>
+      <text x="260" y="25" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#0f172a" font-weight="600">150+ proyectos</text>
+      
+      <rect x="350" y="0" width="140" height="40" rx="8" fill="#f1f5f9"/>
+      <text x="420" y="25" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#0f172a" font-weight="600">98% satisfacción</text>
+      
+      <rect x="510" y="0" width="160" height="40" rx="8" fill="url(#blueGrad)"/>
+      <text x="590" y="25" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#fff" font-weight="600">Certificados Google & AWS</text>
+    </g>
+  </g>
+  
+  <!-- Bottom tagline -->
+  <text x="400" y="560" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#64748b">
+    Expertos en IA con experiencia real en producción
+  </text>
+</svg>
