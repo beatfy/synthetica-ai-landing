@@ -1,31 +1,82 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <defs>
+    <!-- Primary gradient -->
     <linearGradient id="favGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0066FF"/>
-      <stop offset="50%" style="stop-color:#00D4AA"/>
-      <stop offset="100%" style="stop-color:#7B61FF"/>
+      <stop offset="0%" stop-color="#0066FF"/>
+      <stop offset="50%" stop-color="#00D4AA"/>
+      <stop offset="100%" stop-color="#7B61FF"/>
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="favGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0E27"/>
+      <stop offset="100%" stop-color="#151B3D"/>
     </linearGradient>
   </defs>
   
-  <!-- Background circle -->
-  <circle cx="32" cy="32" r="30" fill="#0A0E27"/>
+  <!-- Rounded square background -->
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="url(#bgGrad)"/>
   
-  <!-- Hexagon -->
-  <polygon points="32,10 52,20 52,44 32,54 12,44 12,20" 
-           fill="none" stroke="url(#favGrad)" stroke-width="2"/>
+  <!-- Subtle border -->
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="url(#favGrad)" stroke-width="1" opacity="0.3"/>
   
-  <!-- Center node -->
-  <circle cx="32" cy="32" r="6" fill="url(#favGrad)"/>
+  <!-- ========== STYLIZED "S" ICON ========== -->
+  <g transform="translate(8, 6)" filter="url(#favGlow)">
+    <!-- Main "S" curve - bold and recognizable -->
+    <path d="
+      M 24 4
+      C 38 4, 44 12, 44 20
+      C 44 28, 36 32, 24 34
+      C 12 36, 4 42, 4 50
+      C 4 58, 14 52, 24 52
+    " fill="none" stroke="url(#favGrad)" stroke-width="4.5" stroke-linecap="round"/>
+    
+    <!-- Inner accent curves for depth -->
+    <path d="
+      M 24 8
+      C 34 8, 40 14, 40 20
+      C 40 26, 34 30, 24 32
+    " fill="none" stroke="#00D4AA" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    
+    <path d="
+      M 24 48
+      C 14 48, 8 46, 8 50
+    " fill="none" stroke="#7B61FF" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    
+    <!-- Neural network nodes -->
+    <!-- Top node -->
+    <circle cx="24" cy="4" r="4" fill="url(#favGrad)"/>
+    <circle cx="24" cy="4" r="2" fill="#FFFFFF" opacity="0.9"/>
+    
+    <!-- Middle-right node -->
+    <circle cx="44" cy="20" r="3.5" fill="#0066FF"/>
+    <circle cx="44" cy="20" r="1.75" fill="#FFFFFF" opacity="0.85"/>
+    
+    <!-- Center node -->
+    <circle cx="24" cy="34" r="4.5" fill="url(#favGrad)"/>
+    <circle cx="24" cy="34" r="2.25" fill="#FFFFFF" opacity="0.9"/>
+    
+    <!-- Bottom node -->
+    <circle cx="24" cy="52" r="4" fill="url(#favGrad)"/>
+    <circle cx="24" cy="52" r="2" fill="#FFFFFF" opacity="0.9"/>
+    
+    <!-- Connecting lines (neural network feel) -->
+    <g stroke-width="1" opacity="0.5" stroke-dasharray="2,2">
+      <line x1="24" y1="4" x2="44" y2="20" stroke="#0066FF"/>
+      <line x1="44" y1="20" x2="24" y2="34" stroke="#00D4AA"/>
+      <line x1="24" y1="34" x2="24" y2="52" stroke="#7B61FF"/>
+    </g>
+  </g>
   
-  <!-- Outer nodes -->
-  <circle cx="22" cy="24" r="3" fill="#0066FF"/>
-  <circle cx="42" cy="24" r="3" fill="#7B61FF"/>
-  <circle cx="22" cy="40" r="3" fill="#00D4AA"/>
-  <circle cx="42" cy="40" r="3" fill="#0066FF"/>
-  
-  <!-- Connections -->
-  <line x1="32" y1="32" x2="22" y2="24" stroke="#0066FF" stroke-width="1" opacity="0.6"/>
-  <line x1="32" y1="32" x2="42" y2="24" stroke="#7B61FF" stroke-width="1" opacity="0.6"/>
-  <line x1="32" y1="32" x2="22" y2="40" stroke="#00D4AA" stroke-width="1" opacity="0.6"/>
-  <line x1="32" y1="32" x2="42" y2="40" stroke="#0066FF" stroke-width="1" opacity="0.6"/>
+  <!-- Outer subtle ring -->
+  <circle cx="32" cy="32" r="28" fill="none" stroke="url(#favGrad)" stroke-width="0.75" opacity="0.2"/>
 </svg>
